@@ -1,0 +1,5 @@
+Gizlemek için elektronik tesisatları düzgünce lehimleyiniz, tesisatını yaptığınız yerlerin üzerini ısıyla daralan makaron
+ile gizleyebilirsiniz. ATTİN85 modülünü diğer elemanlarına zarar vermeyeck çeklinde usb portunda kısaltma yapabilirsiniz.
+atağı başlatmak için kabloyu takmanız yeterlidir. uzun kullanımda sorun oluşturmaz. 
+
+projeyi herkesin yapması için geliştirdim. kablo yerine adaptör içine gizleyebilirsiniz

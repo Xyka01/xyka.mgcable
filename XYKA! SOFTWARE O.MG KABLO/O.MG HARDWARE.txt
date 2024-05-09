@@ -1,0 +1,38 @@
+//README OKUYUNUZ. #README FİLE
+
+4 WİRE CABLE
+
+RED (VCC - 5V/DC _ (+ POSİTİVE))
+BLACK (GND - GROUND _ (- NEGATİVE))
+GREEN (DATA - RX_TX)
+BLUE (DATA - TX_RX)
+
+ATT85 MİCRO CHİP
+
+V1 (VCC - 5V/3.3V (+ POSİTİVE))
+G1 (GND - GROUND (- NEGATİVE))
+D1 (DATA 1 PİN - RX_TX)
+D2 (DATA 2 PİN - TX_RX)
+
+ELECTRONİC COMPONENT
+
+1N4007 diode (----)
+
+CİRCUİT SHEMA
+
+(C-VCC = ATT-VCC) // voltage information (5V - 3.3V)
+(C-GND = ATT-GND) //SHEMATİC GROUND PİN DİODE 
+(C-D1 = ATT-D1) // DATA İNFORMATİON - TR(iletişim yolundan geçen verilerin usb ile haberleşmemesi gerek)
+(C-D2 = ATT-D2) // DATA İNFORMATİON - TR(iletişim yolundan geçen verilerin usb ile haberleşmemesi gerek)
+
+CİRCUİT DESCRİPTİON (TR) 
+>> ATT85 modülü verici-alıcı kısmı (RX_TX) pinleri usb pinlerinde bağlanmayacaktır. USB pinlerinden sadece diagram belirtilen
+voltaj ve gerilim değerine göre beslemesi yapılacaktır. Aksi takdirde kolayca stdlt (YAZILIM SİLİNMESİ) gibi yazılımsal
+kaynak sorunları ortaya çıkar. Tasarlanan yazılım ve modüller (TELEFON VE BİLGİSAYAR) için uygundur. BYPASS hakkında yazılımsal
+bilgi bulunmamaktadır. Test edilen cihazda kilit süresi gibi bir sorun ile karşılaşabilirsiniz.
+
+>> Kullanılacak kablo türü data yani veri iletişim yolunu desteklemelidir. 4 ayrı kablodan oluşmalıdır, USB portu yani 
+ilk besleme portundan sadece besleme gerilimi çekilmelidir. uç soketi yani telefona takılacak kısımdan bruteforce atağı 
+denenmelidir.
+
+>> BRUTE FORCE yazılımına bypass ileriki yazılım gücellenmesinde eklenecektir.

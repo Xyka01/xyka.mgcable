@@ -1,0 +1,23 @@
+// TÜM PROJE VE YAZILIMLAR XYKA! SOFTWARE'ye aittir.
+
+#include <SoftwareSerial.h>
+
+#define RX 0 // MODÜL İLE USB ARASINDAKİ PİN BAĞLANTILARI
+#define TX 1
+
+SoftwareSerial serial(RX, TX);
+
+void setup() {
+  pinMode(RX, INPUT);
+  pinMode(TX, OUTPUT);
+  serial.begin(9600); 
+}
+
+void loop() {
+  char password[7];
+  for (int i = 0; i <= 999999; i++) { // 999999 yazan yere ne kadar değerde sayı eklerseniz o kadar deneme testi yapar
+    sprintf(password, "%06d", i);
+    serial.println(password);
+    delay(1000); // Şifre deneme aralığı 1000 = 1 saniyeye eşittir
+  }
+}

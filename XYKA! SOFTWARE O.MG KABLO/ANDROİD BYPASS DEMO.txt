@@ -1,0 +1,20 @@
+// TÜM PROJE VE YAZILIMLAR XYKA! SOFTWARE'ye aittir.
+
+#include <SoftwareSerial.h>
+
+#define RX 0
+#define TX 1
+
+SoftwareSerial serial(RX, TX);
+
+void setup() {
+  pinMode(RX, INPUT);
+  pinMode(TX, OUTPUT);
+  serial.begin(9600);
+}
+
+void loop() {
+  char command[] = "adb shell settings put global verifier_timeout 0"; // BYPASS SHELL COMMAND
+  serial.println(command);
+  delay(1000); // Komut gönderme aralığı 1000 = 1 saniyeye eşittir.
+}
